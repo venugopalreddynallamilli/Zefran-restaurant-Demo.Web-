@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZEFRAN — The Imperial Dum Biryani | Royal Gastronomy</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -63,10 +67,22 @@
 
   <style>
     /* Custom Luxury Styling & Micro-interactions */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #110a08; }
-    ::-webkit-scrollbar-thumb { background: #392a24; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #e06a3b; }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #110a08;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #392a24;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e06a3b;
+    }
 
     .gold-gradient-text {
       background: linear-gradient(135deg, #ffffff 15%, #ffe6b0 50%, #f5bd58 100%);
@@ -83,7 +99,7 @@
     /* 2K Hero Canvas */
     #hero-canvas {
       width: 100%;
-      height: 100%;
+      m height: 100%;
       display: block;
       object-fit: cover;
       filter: contrast(105%) saturate(106%);
@@ -104,34 +120,42 @@
       opacity: 0;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .toast-show {
       transform: translateY(0);
       opacity: 1;
     }
   </style>
 </head>
-<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary/30 selection:text-secondary overflow-x-hidden">
+
+<body
+  class="bg-surface font-body text-on-surface antialiased selection:bg-primary/30 selection:text-secondary overflow-x-hidden">
 
   <!-- ========================================================================= -->
   <!-- TOAST NOTIFICATION CONTAINER                                              -->
   <!-- ========================================================================= -->
-  <div id="toast-container" class="fixed top-24 right-6 z-50 pointer-events-none flex flex-col gap-2 max-w-sm w-full"></div>
+  <div id="toast-container" class="fixed top-24 right-6 z-50 pointer-events-none flex flex-col gap-2 max-w-sm w-full">
+  </div>
 
   <!-- ========================================================================= -->
   <!-- NAVIGATION BAR                                                            -->
   <!-- ========================================================================= -->
-  <header class="fixed top-0 w-full z-50 editorial-glass border-b border-outline-variant/30 transition-all duration-300" id="main-header">
+  <header class="fixed top-0 w-full z-50 editorial-glass border-b border-outline-variant/30 transition-all duration-300"
+    id="main-header">
     <div class="h-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
-      
+
       <!-- Brand Logo & Monogram -->
       <a href="#" class="flex items-center gap-3.5 group cursor-pointer" aria-label="ZEFRAN Home">
-        <div class="w-10 h-10 rounded-full border border-secondary/60 flex items-center justify-center bg-surface-container shadow-[0_0_18px_rgba(245,189,88,0.22)] group-hover:border-secondary transition-all">
-          <svg class="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L14.7 8.5L21.5 9.2L16.3 13.8L17.8 20.6L12 17.2L6.2 20.6L7.7 13.8L2.5 9.2L9.3 8.5L12 2Z"/>
+        <div
+          class="w-10 h-10 rounded-full border border-secondary/60 flex items-center justify-center bg-surface-container shadow-[0_0_18px_rgba(245,189,88,0.22)] group-hover:border-secondary transition-all">
+          <svg class="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path d="M12 2L14.7 8.5L21.5 9.2L16.3 13.8L17.8 20.6L12 17.2L6.2 20.6L7.7 13.8L2.5 9.2L9.3 8.5L12 2Z" />
           </svg>
         </div>
         <div class="flex flex-col">
-          <span class="font-cinzel text-xl sm:text-2xl font-black tracking-[0.25em] text-white uppercase group-hover:text-secondary transition-colors">
+          <span
+            class="font-cinzel text-xl sm:text-2xl font-black tracking-[0.25em] text-white uppercase group-hover:text-secondary transition-colors">
             ZEFRAN
           </span>
           <span class="text-[9px] tracking-[0.32em] text-secondary font-medium uppercase opacity-90 -mt-0.5">
@@ -142,51 +166,70 @@
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-8 lg:gap-11">
-        <a href="#hero-scroll-track" class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
+        <a href="#hero-scroll-track"
+          class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
           The Experience
         </a>
-        <a href="#menu" class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
+        <a href="#menu"
+          class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
           Menu
         </a>
-        <a href="#our-story" class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
+        <a href="#our-story"
+          class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
           Our Heritage
         </a>
-        <a href="#atmosphere" class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
+        <a href="#atmosphere"
+          class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
           Atmosphere
         </a>
-        <a href="#reservations" class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
+        <a href="#reservations"
+          class="text-[15px] tracking-[0.14em] uppercase text-on-surface/85 hover:text-secondary hover:drop-shadow-[0_0_10px_rgba(245,189,88,0.5)] transition-all font-medium">
           Reservations
         </a>
       </nav>
 
       <!-- Action Elements: Explore Menu CTA & Live Shopping Cart Icon -->
       <div class="flex items-center gap-4 sm:gap-5">
-        <a href="#menu" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-clay-accent to-primary text-white text-[12px] font-bold tracking-[0.18em] uppercase rounded-md shadow-[0_4px_16px_rgba(224,106,59,0.35)] hover:shadow-[0_6px_22px_rgba(224,106,59,0.55)] hover:brightness-110 transition-all">
+        <a href="#menu"
+          class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-clay-accent to-primary text-white text-[12px] font-bold tracking-[0.18em] uppercase rounded-md shadow-[0_4px_16px_rgba(224,106,59,0.35)] hover:shadow-[0_6px_22px_rgba(224,106,59,0.55)] hover:brightness-110 transition-all">
           <span>Explore Menu</span>
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
 
         <!-- Cart Button with Live Item Count Badge -->
-        <button aria-label="Shopping Cart" class="relative p-2.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-all" onclick="toggleCartDrawer()">
+        <button aria-label="Shopping Cart"
+          class="relative p-2.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-all"
+          onclick="toggleCartDrawer()">
           <span class="material-symbols-outlined text-2xl">shopping_bag</span>
-          <span class="absolute top-0.5 right-0.5 w-5 h-5 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-lg transition-transform duration-200" id="cart-counter-badge">0</span>
+          <span
+            class="absolute top-0.5 right-0.5 w-5 h-5 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-lg transition-transform duration-200"
+            id="cart-counter-badge">0</span>
         </button>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button class="md:hidden p-2 text-on-surface hover:text-secondary transition-colors" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+        <button class="md:hidden p-2 text-on-surface hover:text-secondary transition-colors"
+          onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
           <span class="material-symbols-outlined text-2xl" id="menu-hamburger-icon">menu</span>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div class="md:hidden hidden bg-surface-container-high border-b border-outline-variant/40 px-6 py-5 flex flex-col gap-4" id="mobile-menu-drawer">
-      <a href="#hero-scroll-track" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">The Experience</a>
-      <a href="#menu" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Menu</a>
-      <a href="#our-story" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Our Heritage</a>
-      <a href="#atmosphere" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Atmosphere</a>
-      <a href="#reservations" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Reservations</a>
-      <a href="#menu" onclick="toggleMobileMenu()" class="inline-flex justify-center items-center gap-2 py-2.5 bg-primary text-white font-bold text-xs uppercase tracking-widest rounded-md mt-2">
+    <div
+      class="md:hidden hidden bg-surface-container-high border-b border-outline-variant/40 px-6 py-5 flex flex-col gap-4"
+      id="mobile-menu-drawer">
+      <a href="#hero-scroll-track" onclick="toggleMobileMenu()"
+        class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">The Experience</a>
+      <a href="#menu" onclick="toggleMobileMenu()"
+        class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Menu</a>
+      <a href="#our-story" onclick="toggleMobileMenu()"
+        class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Our Heritage</a>
+      <a href="#atmosphere" onclick="toggleMobileMenu()"
+        class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Atmosphere</a>
+      <a href="#reservations" onclick="toggleMobileMenu()"
+        class="text-sm font-semibold tracking-wider uppercase text-on-surface hover:text-secondary">Reservations</a>
+      <a href="#menu" onclick="toggleMobileMenu()"
+        class="inline-flex justify-center items-center gap-2 py-2.5 bg-primary text-white font-bold text-xs uppercase tracking-widest rounded-md mt-2">
         Explore Menu
       </a>
     </div>
@@ -198,49 +241,63 @@
     <!-- Labels 'ACT I', 'ACT II' & Scene Headings Removed; Paragraphs Preserved   -->
     <!-- ========================================================================= -->
     <section id="hero-scroll-track" class="relative w-full" style="height: 380vh;">
-      
+
       <!-- Sticky Canvas Viewport (Pins cleanly for 100vh during the scroll journey) -->
       <div class="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center bg-black">
-        
+
         <!-- 2K Ultra Smooth Hardware-Accelerated Canvas -->
         <canvas id="hero-canvas"></canvas>
 
         <!-- Cinematic Ambient Gradient Scrims & Vignette -->
-        <div class="absolute inset-0 bg-gradient-to-b from-surface-dim/80 via-transparent to-surface-dim/95 pointer-events-none z-10"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_35%,_rgba(17,10,8,0.75)_88%)] pointer-events-none z-10"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-surface-dim/80 via-transparent to-surface-dim/95 pointer-events-none z-10">
+        </div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_35%,_rgba(17,10,8,0.75)_88%)] pointer-events-none z-10">
+        </div>
 
         <!-- STAGE 0: HERO INTRODUCTORY TITLE OVERLAY (0% - 25% Scroll) -->
-        <div id="hero-title-overlay" class="absolute z-20 max-w-4xl mx-auto text-center px-6 transition-all duration-500 ease-out flex flex-col items-center gap-3">
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container/80 border border-secondary/30 backdrop-blur-md shadow-lg">
+        <div id="hero-title-overlay"
+          class="absolute z-20 max-w-4xl mx-auto text-center px-6 transition-all duration-500 ease-out flex flex-col items-center gap-3">
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container/80 border border-secondary/30 backdrop-blur-md shadow-lg">
             <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#f5bd58] animate-pulse"></span>
             <span class="text-[11px] font-bold tracking-[0.24em] uppercase text-secondary">
               ESTD 1684 • The Art of Dum Pukht
             </span>
           </div>
 
-          <h1 class="font-cinzel text-5xl sm:text-7xl lg:text-8xl font-black tracking-[0.22em] uppercase gold-gradient-text drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)]">
+          <h1
+            class="font-cinzel text-5xl sm:text-7xl lg:text-8xl font-black tracking-[0.22em] uppercase gold-gradient-text drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)]">
             ZEFRAN
           </h1>
 
-          <div class="font-headline text-2xl sm:text-3xl lg:text-4xl italic text-on-surface font-light tracking-wide -mt-1">
-            Royal Heritage in <span class="text-secondary font-normal drop-shadow-[0_0_15px_rgba(245,189,88,0.35)]">Every Single Grain</span>
+          <div
+            class="font-headline text-2xl sm:text-3xl lg:text-4xl italic text-on-surface font-light tracking-wide -mt-1">
+            Royal Heritage in <span
+              class="text-secondary font-normal drop-shadow-[0_0_15px_rgba(245,189,88,0.35)]">Every Single Grain</span>
           </div>
 
-          <p class="font-body text-[16px] sm:text-[18px] leading-relaxed text-[#fbf4ee]/90 max-w-2xl font-light mt-1 drop-shadow-md">
-            Slow-cooked inside sealed unglazed clay handis over glowing charcoal embers. Hand-layered with 2-year aged Basmati, whole potli spices, and pure Kashmiri Mongra Saffron.
+          <p
+            class="font-body text-[16px] sm:text-[18px] leading-relaxed text-[#fbf4ee]/90 max-w-2xl font-light mt-1 drop-shadow-md">
+            Slow-cooked inside sealed unglazed clay handis over glowing charcoal embers. Hand-layered with 2-year aged
+            Basmati, whole potli spices, and pure Kashmiri Mongra Saffron.
           </p>
 
           <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
-            <a href="#menu" class="px-8 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-[12px] tracking-[0.2em] uppercase rounded-md shadow-[0_6px_22px_rgba(224,106,59,0.4)] hover:shadow-[0_8px_28px_rgba(224,106,59,0.6)] hover:brightness-110 transition-all">
+            <a href="#menu"
+              class="px-8 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-[12px] tracking-[0.2em] uppercase rounded-md shadow-[0_6px_22px_rgba(224,106,59,0.4)] hover:shadow-[0_8px_28px_rgba(224,106,59,0.6)] hover:brightness-110 transition-all">
               Explore Menu
             </a>
-            <button onclick="openReservationModal()" class="px-8 py-3.5 bg-surface-container/80 hover:bg-surface-container border border-secondary/40 text-secondary font-semibold text-[12px] tracking-[0.2em] uppercase rounded-md transition-all shadow-md">
+            <button onclick="openReservationModal()"
+              class="px-8 py-3.5 bg-surface-container/80 hover:bg-surface-container border border-secondary/40 text-secondary font-semibold text-[12px] tracking-[0.2em] uppercase rounded-md transition-all shadow-md">
               Reserve Table
             </button>
           </div>
 
           <!-- Subtle Indicator -->
-          <div class="mt-6 flex flex-col items-center gap-1.5 text-on-surface-variant/80 text-[11px] tracking-[0.24em] uppercase">
+          <div
+            class="mt-6 flex flex-col items-center gap-1.5 text-on-surface-variant/80 text-[11px] tracking-[0.24em] uppercase">
             <span class="animate-bounce material-symbols-outlined text-secondary text-xl">expand_more</span>
             <span>Scroll down to unseal the handi</span>
           </div>
@@ -248,12 +305,15 @@
 
         <!-- STAGE 1: LID OPENS & NATURAL STEAM RISES (30% - 60% Scroll) -->
         <!-- Act I label and scene heading removed as requested; paragraphs & taglines preserved -->
-        <div id="stage-lid-overlay" class="absolute z-20 max-w-md left-6 sm:left-12 lg:left-24 bottom-16 sm:bottom-24 opacity-0 transition-all duration-500 ease-out pointer-events-none">
+        <div id="stage-lid-overlay"
+          class="absolute z-20 max-w-md left-6 sm:left-12 lg:left-24 bottom-16 sm:bottom-24 opacity-0 transition-all duration-500 ease-out pointer-events-none">
           <div class="editorial-card p-6 sm:p-8 rounded-2xl flex flex-col gap-3">
             <p class="font-body text-[14px] sm:text-[15px] leading-relaxed text-[#fbf4ee]/90 font-light">
-              As the earthen dough seal yields, centuries of trapped moisture and heat billow into delicate, aromatic saffron steam. The clay handi preserves every nuance of cardamom and wild mace.
+              As the earthen dough seal yields, centuries of trapped moisture and heat billow into delicate, aromatic
+              saffron steam. The clay handi preserves every nuance of cardamom and wild mace.
             </p>
-            <div class="flex items-center gap-4 pt-3 border-t border-outline-variant/30 text-xs font-mono text-secondary">
+            <div
+              class="flex items-center gap-4 pt-3 border-t border-outline-variant/30 text-xs font-mono text-secondary">
               <span>CHARCOAL EMBERS</span>
               <span>•</span>
               <span>DUM PUKHT TRADITION</span>
@@ -263,13 +323,16 @@
 
         <!-- STAGE 2: GOLDEN BASMATI & BIRYANI GRAND REVEAL (65% - 95% Scroll) -->
         <!-- Act II label and scene heading removed as requested; paragraphs & taglines preserved -->
-        <div id="stage-reveal-overlay" class="absolute z-20 max-w-md right-6 sm:right-12 lg:right-24 bottom-16 sm:bottom-24 opacity-0 transition-all duration-500 ease-out pointer-events-none">
+        <div id="stage-reveal-overlay"
+          class="absolute z-20 max-w-md right-6 sm:right-12 lg:right-24 bottom-16 sm:bottom-24 opacity-0 transition-all duration-500 ease-out pointer-events-none">
           <div class="editorial-card p-6 sm:p-8 rounded-2xl flex flex-col gap-3">
             <p class="font-body text-[14px] sm:text-[15px] leading-relaxed text-[#fbf4ee]/90 font-light">
-              Long, tender grains infused with pure Kashmiri saffron, crowned with fried barista onions and garden mint. Fall-off-the-bone chicken marinated in hung curd and royal spices.
+              Long, tender grains infused with pure Kashmiri saffron, crowned with fried barista onions and garden mint.
+              Fall-off-the-bone chicken marinated in hung curd and royal spices.
             </p>
             <div class="flex items-center gap-3 pt-3 border-t border-outline-variant/30">
-              <a href="#menu" class="pointer-events-auto px-5 py-2 bg-primary text-white text-[11px] font-bold uppercase tracking-wider rounded shadow hover:brightness-110 transition-all">
+              <a href="#menu"
+                class="pointer-events-auto px-5 py-2 bg-primary text-white text-[11px] font-bold uppercase tracking-wider rounded shadow hover:brightness-110 transition-all">
                 Order Your Handi
               </a>
               <span class="text-xs text-secondary font-mono">100% ARTISANAL CLAY</span>
@@ -279,7 +342,9 @@
 
         <!-- Subtle Bottom Scroll Progress Line -->
         <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/10 z-30 pointer-events-none">
-          <div id="scroll-progress-line" class="h-full bg-gradient-to-r from-clay-accent via-primary to-secondary w-0 transition-all duration-75"></div>
+          <div id="scroll-progress-line"
+            class="h-full bg-gradient-to-r from-clay-accent via-primary to-secondary w-0 transition-all duration-75">
+          </div>
         </div>
 
       </div>
@@ -292,48 +357,71 @@
     <section class="py-space-xl px-6 sm:px-8 lg:px-12 bg-surface relative z-30" id="menu">
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase bg-secondary/10 px-3.5 py-1 rounded-full border border-secondary/20">
+          <span
+            class="text-xs font-bold tracking-[0.25em] text-secondary uppercase bg-secondary/10 px-3.5 py-1 rounded-full border border-secondary/20">
             Gastronomic Selection
           </span>
           <h2 class="font-headline text-4xl sm:text-5xl lg:text-6xl text-on-surface mt-3">
             The Imperial Menu
           </h2>
           <p class="font-body text-[16px] text-on-surface-variant/90 mt-2 font-light">
-            An homage to royal khansamas, curated with seasonal whole spices, cold-pressed ghee, and authentic charcoal cooking.
+            An homage to royal khansamas, curated with seasonal whole spices, cold-pressed ghee, and authentic charcoal
+            cooking.
           </p>
 
           <!-- Category Navigation Tabs -->
           <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
-            <button class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-bold bg-primary text-white shadow-md transition-all" onclick="filterMenu('all', this)">All</button>
-            <button class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" onclick="filterMenu('biryani', this)">Biryani</button>
-            <button class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" onclick="filterMenu('starters', this)">Starters & Kebabs</button>
-            <button class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" onclick="filterMenu('veg', this)">Vegetarian</button>
-            <button class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" onclick="filterMenu('desserts', this)">Desserts</button>
+            <button
+              class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-bold bg-primary text-white shadow-md transition-all"
+              onclick="filterMenu('all', this)">All</button>
+            <button
+              class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all"
+              onclick="filterMenu('biryani', this)">Biryani</button>
+            <button
+              class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all"
+              onclick="filterMenu('starters', this)">Starters & Kebabs</button>
+            <button
+              class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all"
+              onclick="filterMenu('veg', this)">Vegetarian</button>
+            <button
+              class="menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all"
+              onclick="filterMenu('desserts', this)">Desserts</button>
           </div>
         </div>
 
         <!-- Menu Items Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          
+
           <!-- Item 1: Signature Biryani -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="biryani">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="biryani">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400" title="Non-Vegetarian"></span>
-                    <h3 class="font-headline text-xl text-on-surface font-semibold">Signature Hyderabadi Chicken Dum Biryani</h3>
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400"
+                      title="Non-Vegetarian"></span>
+                    <h3 class="font-headline text-xl text-on-surface font-semibold">Signature Hyderabadi Chicken Dum
+                      Biryani</h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$34</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Tender free-range chicken marinated in fresh curd, raw papaya, and 18 secret potli spices, layered with saffron-infused aged basmati.
+                  Tender free-range chicken marinated in fresh curd, raw papaya, and 18 secret potli spices, layered
+                  with saffron-infused aged basmati.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-primary/20 text-secondary rounded font-bold">Chef's Signature</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('biryani-1', 'Signature Hyderabadi Chicken Dum Biryani', 34, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-primary/20 text-secondary rounded font-bold">Chef's
+                  Signature</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('biryani-1', 'Signature Hyderabadi Chicken Dum Biryani', 34, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
                   Add to Cart
                 </button>
               </div>
@@ -341,24 +429,34 @@
           </div>
 
           <!-- Item 2: Awadhi Mutton -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="biryani">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="biryani">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400" title="Non-Vegetarian"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400"
+                      title="Non-Vegetarian"></span>
                     <h3 class="font-headline text-xl text-on-surface font-semibold">Awadhi Mutton Dum Biryani</h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$38</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Slow-braised succulent lamb shank cooked in fragrant bone stock (yakhni), layered with natural kewra essence and aged long-grain basmati.
+                  Slow-braised succulent lamb shank cooked in fragrant bone stock (yakhni), layered with natural kewra
+                  essence and aged long-grain basmati.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal Awadh</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('biryani-2', 'Awadhi Mutton Dum Biryani', 38, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal
+                  Awadh</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('biryani-2', 'Awadhi Mutton Dum Biryani', 38, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
                   Add to Cart
                 </button>
               </div>
@@ -366,24 +464,35 @@
           </div>
 
           <!-- Item 3: Truffle Mushroom Veg -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="veg">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="veg">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400" title="Vegetarian"></span>
-                    <h3 class="font-headline text-xl text-on-surface font-semibold">Truffle & Wild Mushroom Dum Biryani</h3>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400"
+                      title="Vegetarian"></span>
+                    <h3 class="font-headline text-xl text-on-surface font-semibold">Truffle & Wild Mushroom Dum Biryani
+                    </h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$28</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Morel and shiitake forest mushrooms, baby potatoes, and artisanal paneer infused with white truffle essence under a sealed crust.
+                  Morel and shiitake forest mushrooms, baby potatoes, and artisanal paneer infused with white truffle
+                  essence under a sealed crust.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-emerald-950 text-emerald-300 rounded font-bold">Plant Craft</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('veg-1', 'Truffle & Wild Mushroom Dum Biryani', 28, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-emerald-950 text-emerald-300 rounded font-bold">Plant
+                  Craft</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('veg-1', 'Truffle & Wild Mushroom Dum Biryani', 28, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
                   Add to Cart
                 </button>
               </div>
@@ -391,24 +500,35 @@
           </div>
 
           <!-- Item 4: Galouti Kebab -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="starters">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="starters">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400" title="Non-Vegetarian"></span>
-                    <h3 class="font-headline text-xl text-on-surface font-semibold">Galouti Kebab with Ulte Tawa Paratha</h3>
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-400"
+                      title="Non-Vegetarian"></span>
+                    <h3 class="font-headline text-xl text-on-surface font-semibold">Galouti Kebab with Ulte Tawa Paratha
+                    </h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$22</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Melt-in-mouth smoked lamb galouti patties ground with 16 royal spices, served on gossamer-thin griddle saffron parathas.
+                  Melt-in-mouth smoked lamb galouti patties ground with 16 royal spices, served on gossamer-thin griddle
+                  saffron parathas.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal Starter</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('starter-1', 'Galouti Kebab with Ulte Tawa Paratha', 22, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal
+                  Starter</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('starter-1', 'Galouti Kebab with Ulte Tawa Paratha', 22, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
                   Add to Cart
                 </button>
               </div>
@@ -416,24 +536,33 @@
           </div>
 
           <!-- Item 5: Malai Paneer Tikka -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="starters">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="starters">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400" title="Vegetarian"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400"
+                      title="Vegetarian"></span>
                     <h3 class="font-headline text-xl text-on-surface font-semibold">Malai Paneer Tikka</h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$20</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Handcrafted cottage cheese marinated in clotted malai cream, cardamom, and white pepper, gently charred over clay tandoor embers.
+                  Handcrafted cottage cheese marinated in clotted malai cream, cardamom, and white pepper, gently
+                  charred over clay tandoor embers.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-emerald-950 text-emerald-300 rounded font-bold">Vegetarian</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('starter-2', 'Malai Paneer Tikka', 20, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-emerald-950 text-emerald-300 rounded font-bold">Vegetarian</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('starter-2', 'Malai Paneer Tikka', 20, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
                   Add to Cart
                 </button>
               </div>
@@ -441,24 +570,34 @@
           </div>
 
           <!-- Item 6: Zafrani Shahi Tukda -->
-          <div class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg" data-category="desserts">
-            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')"></div>
+          <div
+            class="menu-item flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-all shadow-lg"
+            data-category="desserts">
+            <div class="w-full sm:w-40 h-40 rounded-xl bg-cover bg-center shrink-0 shadow-md"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
+            </div>
             <div class="flex flex-col justify-between flex-grow">
               <div>
                 <div class="flex items-start justify-between gap-2">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400" title="Vegetarian"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-400"
+                      title="Vegetarian"></span>
                     <h3 class="font-headline text-xl text-on-surface font-semibold">Zafrani Shahi Tukda</h3>
                   </div>
                   <span class="font-headline text-xl text-secondary font-bold">$16</span>
                 </div>
                 <p class="font-body text-[14px] text-on-surface-variant/90 mt-1.5 italic font-light leading-relaxed">
-                  Crisp ghee-fried brioche soaked in saffron cardamom syrup, dressed with slow-simmered rabri cream, silver leaf, and roasted pistachios.
+                  Crisp ghee-fried brioche soaked in saffron cardamom syrup, dressed with slow-simmered rabri cream,
+                  silver leaf, and roasted pistachios.
                 </p>
               </div>
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
-                <span class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal Dessert</span>
-                <button class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all" onclick="addToCart('dessert-1', 'Zafrani Shahi Tukda', 16, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
+                <span
+                  class="text-[10px] tracking-wider uppercase px-2.5 py-0.5 bg-surface-variant text-secondary rounded font-bold">Royal
+                  Dessert</span>
+                <button
+                  class="px-4 py-1.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase font-bold tracking-wider rounded hover:brightness-110 shadow-md transition-all"
+                  onclick="addToCart('dessert-1', 'Zafrani Shahi Tukda', 16, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
                   Add to Cart
                 </button>
               </div>
@@ -474,9 +613,11 @@
     <!-- SIGNATURE DISH FEATURE SECTION                                            -->
     <!-- ========================================================================= -->
     <section class="py-space-xl px-6 sm:px-8 lg:px-12 bg-surface-container-low relative overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')"></div>
+      <div class="absolute inset-0 bg-cover bg-center opacity-30"
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+      </div>
       <div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/90 to-transparent"></div>
-      
+
       <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
         <div class="lg:col-span-8 flex flex-col gap-4">
           <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase">The Masterpiece</span>
@@ -484,14 +625,18 @@
             Royal Hyderabadi Dum Handi
           </h2>
           <p class="font-body text-[16px] sm:text-[17px] leading-relaxed text-[#fbf4ee]/90 font-light max-w-2xl">
-            Slow-cooked for over four hours in sealed terracotta handis over low coal embers. Each serving contains aged basmati rice infused with rare Kashmiri saffron, tender prime cuts of meat, and aromatic whole spices passed down through generations of royal khansamas.
+            Slow-cooked for over four hours in sealed terracotta handis over low coal embers. Each serving contains aged
+            basmati rice infused with rare Kashmiri saffron, tender prime cuts of meat, and aromatic whole spices passed
+            down through generations of royal khansamas.
           </p>
           <div class="flex items-center gap-8 mt-3">
             <div>
               <span class="text-[11px] text-on-surface-variant uppercase tracking-wider block">Signature Offering</span>
               <span class="font-headline text-3xl text-secondary font-bold">$34.00</span>
             </div>
-            <button class="px-8 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs font-bold uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all" onclick="addToCart('featured-1', 'Royal Hyderabadi Dum Handi', 34, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+            <button
+              class="px-8 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs font-bold uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all"
+              onclick="addToCart('featured-1', 'Royal Hyderabadi Dum Handi', 34, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
               Order Now
             </button>
           </div>
@@ -505,23 +650,27 @@
     <!-- ========================================================================= -->
     <section class="py-space-xl px-6 sm:px-8 lg:px-12 bg-surface" id="our-story">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         <div class="lg:col-span-6 flex flex-col gap-4">
           <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase">Our Heritage</span>
           <h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl text-on-surface">
             The Philosophy of Dum Pukht
           </h2>
           <p class="font-body text-[16px] leading-relaxed text-[#fbf4ee]/90 font-light">
-            At ZAFRAN, we believe that true culinary luxury cannot be rushed. Our kitchen honors the ancient Persian technique of <em>Dum Pukht</em>—literally translated as "breathing and slow cooking"—where the food cooks in its own natural juices without artificial additives.
+            At ZAFRAN, we believe that true culinary luxury cannot be rushed. Our kitchen honors the ancient Persian
+            technique of <em>Dum Pukht</em>—literally translated as "breathing and slow cooking"—where the food cooks in
+            its own natural juices without artificial additives.
           </p>
           <p class="font-body text-[16px] leading-relaxed text-[#fbf4ee]/90 font-light">
-            Every ingredient is hand-selected: from authentic Mogra saffron threads hand-picked in Pampore to whole spices sourced directly from smallholder artisan farmers across the Indian subcontinent.
+            Every ingredient is hand-selected: from authentic Mogra saffron threads hand-picked in Pampore to whole
+            spices sourced directly from smallholder artisan farmers across the Indian subcontinent.
           </p>
-          
+
           <div class="grid grid-cols-2 gap-6 pt-6 border-t border-outline-variant/30 mt-2">
             <div>
               <h3 class="font-headline text-3xl text-secondary font-bold">100%</h3>
-              <p class="font-body text-[14px] text-on-surface-variant font-light mt-1">Aged Basmati Rice (min 2 years)</p>
+              <p class="font-body text-[14px] text-on-surface-variant font-light mt-1">Aged Basmati Rice (min 2 years)
+              </p>
             </div>
             <div>
               <h3 class="font-headline text-3xl text-secondary font-bold">4+ Hours</h3>
@@ -530,9 +679,13 @@
           </div>
         </div>
 
-        <div class="lg:col-span-6 relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl bg-cover bg-center border border-outline-variant/30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 via-transparent to-transparent flex items-end p-6">
-            <span class="text-on-surface font-headline text-lg italic">Chef garnishing handi with pure saffron threads</span>
+        <div
+          class="lg:col-span-6 relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl bg-cover bg-center border border-outline-variant/30"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 via-transparent to-transparent flex items-end p-6">
+            <span class="text-on-surface font-headline text-lg italic">Chef garnishing handi with pure saffron
+              threads</span>
           </div>
         </div>
 
@@ -546,31 +699,39 @@
     <section class="py-space-xl px-6 sm:px-8 lg:px-12 bg-surface-container-lowest" id="atmosphere">
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase bg-secondary/10 px-3.5 py-1 rounded-full border border-secondary/20">
+          <span
+            class="text-xs font-bold tracking-[0.25em] text-secondary uppercase bg-secondary/10 px-3.5 py-1 rounded-full border border-secondary/20">
             Atmosphere
           </span>
           <h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl text-on-surface mt-3">
             An Intimate Sanctuary
           </h2>
           <p class="font-body text-[16px] text-on-surface-variant/90 mt-2 font-light">
-            Designed with raw terracotta textures, warm candlelight, and copper accents to mirror the warmth of our kitchens.
+            Designed with raw terracotta textures, warm candlelight, and copper accents to mirror the warmth of our
+            kitchens.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
+          <div
+            class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBND-a4aCt6hOq9I6LnxI0GT6ZvdQbOre1zB3VvIkovq5nRyVN_JIWvc_qtDaH-VSKSOD1gmMWshFy9zTpnNOEfQTBQEV4cgtxoI-kNn4Pk3qMWdpFjK7F2iEYUjRGpb1scJkHsbZNtWLQgGKkKjfVMV330kjehfhDEouwj7KcAx7z8avWjdm1eUMt2-7pdaqFi9aL21b8d5N0yt66rZDqnPuwTr6mpOJXBNu4vaVl2HsnWE8UbW_MH')">
             <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/90 to-transparent flex items-end p-6">
               <span class="text-on-surface font-headline text-xl">The Imperial Dining Hall</span>
             </div>
           </div>
 
-          <div class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
+          <div
+            class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrt5-u1M_Qv7fHMWGYQTUi6iXK_zLO_o8bsQxWslhipI0FNvWrTKCoBWN4XBJPKiMNI8V4j3rLCndZTaoM3kyfVhp0JEqsxfc79e1fVVQyeP2LI0AC1ebMDHh8JBeKy-aUaA1AMQpX29UZSLzCkXwYpDXfeVWTqKru9dz2IHdMmW0qW_ttUePC5aVF5yunr45Q6P9hpCszZjIHUxTzu6e6xCvglL06CKFfIIP1QJRMPy3vxC1c6v5z')">
             <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/90 to-transparent flex items-end p-6">
               <span class="text-on-surface font-headline text-xl">Charcoal Open Kitchen</span>
             </div>
           </div>
 
-          <div class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
+          <div
+            class="h-80 rounded-2xl bg-cover bg-center shadow-xl relative overflow-hidden group border border-outline-variant/30"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5ejINr_tk0ue2Ay39qrjrb_FoLCiryNlvpY0yMk0HxF1ugleGf20gG-NKtrlSpTuFvyOl_k6wO7qBu9WoYG69OKSPCz1gm34Vr9cyRLYdLaHeXcjJ3XeU_sFnU9uQ-aIgM4G9jZYBp5JhxBvnU5r5kdwd_pNztykBfSYlmbVs2jOzSGKhyOLaHoy0j8rOq2K61msFHAhECW6yixFp-r97OSwDTHfUDAihK9wimwmvBXnxoAy21vgq')">
             <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/90 to-transparent flex items-end p-6">
               <span class="text-on-surface font-headline text-xl">Chef's Handi Counter</span>
             </div>
@@ -584,8 +745,9 @@
     <!-- TABLE BOOKING & RESERVATIONS                                              -->
     <!-- ========================================================================= -->
     <section class="py-space-xl px-6 sm:px-8 lg:px-12 bg-surface" id="reservations">
-      <div class="max-w-5xl mx-auto bg-surface-container p-8 sm:p-12 rounded-2xl shadow-2xl border border-secondary/25 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
+      <div
+        class="max-w-5xl mx-auto bg-surface-container p-8 sm:p-12 rounded-2xl shadow-2xl border border-secondary/25 grid grid-cols-1 md:grid-cols-2 gap-10">
+
         <div>
           <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase">Table Booking</span>
           <h2 class="font-headline text-3xl sm:text-4xl text-on-surface mt-2">Reserve Your Table</h2>
@@ -596,17 +758,23 @@
           <form class="flex flex-col gap-5 mt-6" onsubmit="handleReservation(event)">
             <div class="flex flex-col gap-1.5">
               <label class="text-xs text-on-surface-variant uppercase tracking-wider">Full Name</label>
-              <input class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors" placeholder="Arthur Pendelton" required type="text"/>
+              <input
+                class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors"
+                placeholder="Arthur Pendelton" required type="text" />
             </div>
 
             <div class="grid grid-cols-2 gap-4">
               <div class="flex flex-col gap-1.5">
                 <label class="text-xs text-on-surface-variant uppercase tracking-wider">Date</label>
-                <input class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors" required type="date"/>
+                <input
+                  class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors"
+                  required type="date" />
               </div>
               <div class="flex flex-col gap-1.5">
                 <label class="text-xs text-on-surface-variant uppercase tracking-wider">Time</label>
-                <select class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors" required>
+                <select
+                  class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors"
+                  required>
                   <option value="18:00">6:00 PM</option>
                   <option value="19:30">7:30 PM</option>
                   <option value="21:00">9:00 PM</option>
@@ -616,14 +784,17 @@
 
             <div class="flex flex-col gap-1.5">
               <label class="text-xs text-on-surface-variant uppercase tracking-wider">Party Size</label>
-              <select class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors">
+              <select
+                class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none transition-colors">
                 <option value="2">2 Guests (Intimate Dining)</option>
                 <option value="4">4 Guests (Standard Table)</option>
                 <option value="6">6+ Guests (Family Handi Feast)</option>
               </select>
             </div>
 
-            <button class="mt-3 px-6 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase tracking-widest font-bold rounded-md hover:brightness-110 shadow-lg transition-all" type="submit">
+            <button
+              class="mt-3 px-6 py-3.5 bg-gradient-to-r from-clay-accent to-primary text-white text-xs uppercase tracking-widest font-bold rounded-md hover:brightness-110 shadow-lg transition-all"
+              type="submit">
               Confirm Reservation
             </button>
           </form>
@@ -633,8 +804,9 @@
           <div>
             <span class="text-xs font-bold tracking-[0.25em] text-secondary uppercase">Location & Hours</span>
             <h3 class="font-headline text-2xl text-on-surface mt-2">ZEFRAN Gastronomy</h3>
-            <p class="font-body text-[14px] text-on-surface-variant mt-2 font-light">452 Saffron Avenue, Epicurean Quarter<br/>London, UK</p>
-            
+            <p class="font-body text-[14px] text-on-surface-variant mt-2 font-light">452 Saffron Avenue, Epicurean
+              Quarter<br />London, UK</p>
+
             <div class="mt-6 space-y-2.5">
               <div class="flex justify-between text-sm">
                 <span class="text-on-surface-variant">Tuesday – Thursday</span>
@@ -653,7 +825,8 @@
 
           <div class="pt-6 border-t border-outline-variant/30 mt-6">
             <span class="text-xs text-on-surface-variant uppercase tracking-wider block">Direct Concierge</span>
-            <p class="font-body text-sm text-on-surface mt-1">+44 (0) 20 7946 0912<br/>concierge@zefrangastronomy.com</p>
+            <p class="font-body text-sm text-on-surface mt-1">+44 (0) 20 7946 0912<br />concierge@zefrangastronomy.com
+            </p>
           </div>
         </div>
 
@@ -666,9 +839,12 @@
   <!-- FULLY FUNCTIONAL SHOPPING CART DRAWER (Interactive Panel)                 -->
   <!-- Add, remove, increase/decrease qty, live subtotals & grand totals         -->
   <!-- ========================================================================= -->
-  <div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300" id="cart-drawer-backdrop" onclick="toggleCartDrawer()">
-    <div class="fixed inset-y-0 right-0 w-full max-w-lg bg-surface-container-high h-full p-6 sm:p-8 flex flex-col justify-between shadow-2xl border-l border-outline-variant/30 transform transition-transform duration-300" onclick="event.stopPropagation()">
-      
+  <div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300"
+    id="cart-drawer-backdrop" onclick="toggleCartDrawer()">
+    <div
+      class="fixed inset-y-0 right-0 w-full max-w-lg bg-surface-container-high h-full p-6 sm:p-8 flex flex-col justify-between shadow-2xl border-l border-outline-variant/30 transform transition-transform duration-300"
+      onclick="event.stopPropagation()">
+
       <!-- Cart Header -->
       <div>
         <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
@@ -678,15 +854,20 @@
             </div>
             <div>
               <h3 class="font-headline text-2xl text-on-surface font-semibold">Your Handi Selection</h3>
-              <span class="text-xs text-secondary font-mono tracking-wider" id="cart-header-count">0 items selected</span>
+              <span class="text-xs text-secondary font-mono tracking-wider" id="cart-header-count">0 items
+                selected</span>
             </div>
           </div>
 
           <div class="flex items-center gap-2">
-            <button class="text-xs text-on-surface-variant hover:text-red-400 px-2 py-1 transition-colors uppercase tracking-wider font-semibold" onclick="clearCart()" title="Clear all items">
+            <button
+              class="text-xs text-on-surface-variant hover:text-red-400 px-2 py-1 transition-colors uppercase tracking-wider font-semibold"
+              onclick="clearCart()" title="Clear all items">
               Clear
             </button>
-            <button class="text-on-surface-variant hover:text-secondary p-1.5 rounded-full hover:bg-surface-container transition-all" onclick="toggleCartDrawer()" aria-label="Close Cart">
+            <button
+              class="text-on-surface-variant hover:text-secondary p-1.5 rounded-full hover:bg-surface-container transition-all"
+              onclick="toggleCartDrawer()" aria-label="Close Cart">
               <span class="material-symbols-outlined text-2xl">close</span>
             </button>
           </div>
@@ -723,7 +904,9 @@
           <span class="font-headline text-3xl text-secondary font-bold" id="cart-total-price">$0.00</span>
         </div>
 
-        <button id="btn-checkout" class="w-full py-4 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-xs uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2" onclick="openCheckoutModal()">
+        <button id="btn-checkout"
+          class="w-full py-4 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-xs uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          onclick="openCheckoutModal()">
           <span>Proceed to Checkout</span>
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </button>
@@ -736,8 +919,10 @@
   <!-- ========================================================================= -->
   <!-- CHECKOUT CONFIRMATION MODAL                                               -->
   <!-- ========================================================================= -->
-  <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-6" id="checkout-modal">
-    <div class="max-w-lg w-full bg-surface-container p-8 rounded-2xl shadow-2xl border border-secondary/40 flex flex-col gap-5">
+  <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-6"
+    id="checkout-modal">
+    <div
+      class="max-w-lg w-full bg-surface-container p-8 rounded-2xl shadow-2xl border border-secondary/40 flex flex-col gap-5">
       <div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
         <div class="flex items-center gap-2.5">
           <span class="material-symbols-outlined text-secondary text-2xl">local_mall</span>
@@ -754,27 +939,33 @@
 
       <form class="flex flex-col gap-4" onsubmit="handlePlaceOrder(event)">
         <div class="flex flex-col gap-1">
-          <label class="text-xs uppercase tracking-wider text-on-surface-variant">Delivery Address or Table Number</label>
-          <input type="text" required placeholder="e.g. Table 4 or 452 Saffron Ave, Flat 3B" class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm"/>
+          <label class="text-xs uppercase tracking-wider text-on-surface-variant">Delivery Address or Table
+            Number</label>
+          <input type="text" required placeholder="e.g. Table 4 or 452 Saffron Ave, Flat 3B"
+            class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm" />
         </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div class="flex flex-col gap-1">
             <label class="text-xs uppercase tracking-wider text-on-surface-variant">Customer Name</label>
-            <input type="text" required placeholder="Lord Arthur" class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm"/>
+            <input type="text" required placeholder="Lord Arthur"
+              class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm" />
           </div>
           <div class="flex flex-col gap-1">
             <label class="text-xs uppercase tracking-wider text-on-surface-variant">Contact Phone</label>
-            <input type="tel" required placeholder="+44 20 7946 0912" class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm"/>
+            <input type="tel" required placeholder="+44 20 7946 0912"
+              class="bg-surface-dim border-b border-outline px-2 py-2 text-on-surface focus:border-secondary outline-none text-sm" />
           </div>
         </div>
 
-        <div class="bg-surface-dim p-4 rounded-xl border border-outline-variant/30 flex justify-between items-center text-sm">
+        <div
+          class="bg-surface-dim p-4 rounded-xl border border-outline-variant/30 flex justify-between items-center text-sm">
           <span class="text-on-surface font-medium">Final Amount Payable</span>
           <span class="font-headline text-2xl text-secondary font-bold" id="checkout-modal-total">$0.00</span>
         </div>
 
-        <button type="submit" class="mt-2 w-full py-4 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-xs uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all">
+        <button type="submit"
+          class="mt-2 w-full py-4 bg-gradient-to-r from-clay-accent to-primary text-white font-bold text-xs uppercase tracking-widest rounded-md hover:brightness-110 shadow-xl transition-all">
           Confirm & Place Handi Order
         </button>
       </form>
@@ -785,14 +976,18 @@
   <!-- ========================================================================= -->
   <!-- ORDER / RESERVATION SUCCESS MODAL                                         -->
   <!-- ========================================================================= -->
-  <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-6" id="reservation-success-modal">
-    <div class="max-w-md w-full bg-surface-container p-8 rounded-2xl shadow-2xl border border-secondary/40 text-center flex flex-col gap-4">
+  <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-6"
+    id="reservation-success-modal">
+    <div
+      class="max-w-md w-full bg-surface-container p-8 rounded-2xl shadow-2xl border border-secondary/40 text-center flex flex-col gap-4">
       <span class="material-symbols-outlined text-secondary text-5xl">check_circle</span>
       <h3 class="font-headline text-3xl text-on-surface font-semibold" id="success-modal-title">Table Reserved</h3>
       <p class="font-body text-[15px] text-on-surface-variant leading-relaxed font-light" id="success-modal-desc">
         Your imperial booking at ZEFRAN has been confirmed. Our culinary khansamas look forward to hosting you.
       </p>
-      <button class="mt-2 px-6 py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-md hover:brightness-110 transition-all" onclick="closeReservationSuccess()">
+      <button
+        class="mt-2 px-6 py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-md hover:brightness-110 transition-all"
+        onclick="closeReservationSuccess()">
         Close
       </button>
     </div>
@@ -803,7 +998,8 @@
   <!-- FOOTER                                                                    -->
   <!-- ========================================================================= -->
   <footer class="w-full bg-surface-container-lowest py-10 border-t border-outline-variant/20">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant text-xs tracking-wider">
+    <div
+      class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant text-xs tracking-wider">
       <div class="flex items-center gap-2">
         <span class="font-cinzel text-base font-bold text-white tracking-widest">ZEFRAN</span>
         <span>— © 2026 ZEFRAN Imperial Gastronomy. All rights reserved.</span>
@@ -827,7 +1023,7 @@
     const TOTAL_FRAMES = 238;
     const FRAME_ASPECT = 1920 / 1080;
     const images = new Array(TOTAL_FRAMES + 1);
-    
+
     let currentFrame = 1;
     let targetFrame = 1;
     let lastDrawnFrame = -1;
@@ -896,7 +1092,7 @@
         img.onerror = () => {
           loadNext();
         };
-        img.src = `/frame/${i}.jpg`;
+        img.src = `./ezgif-frame-${String(i).padStart(3, '0')} (5).jpg`;
       }
 
       for (let k = 0; k < concurrency; k++) {
@@ -907,7 +1103,7 @@
     function handleScroll() {
       const rect = scrollTrack.getBoundingClientRect();
       const scrollableDist = rect.height - window.innerHeight;
-      
+
       if (scrollableDist <= 0) return;
 
       const rawProgress = -rect.top / scrollableDist;
@@ -1211,7 +1407,7 @@
     function filterMenu(category, clickedBtn) {
       const items = document.querySelectorAll('.menu-item');
       const tabs = document.querySelectorAll('.menu-tab');
-      
+
       tabs.forEach(tab => {
         tab.className = "menu-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium bg-surface-container text-on-surface-variant hover:text-on-surface transition-all";
       });
@@ -1275,4 +1471,5 @@
     });
   </script>
 </body>
+
 </html>
